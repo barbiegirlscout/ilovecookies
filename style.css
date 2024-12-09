@@ -3,7 +3,7 @@
     font-family: 'Trefoil Sans';
     //////edit this !!!
     src: url('https://githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff') format('woff');
+         url('https://github.com/barbiegirlscout/ilovecookies/blob/c6d117fb39b71341f00ec1939a7d470fc8235730/fonts/trefoilsans-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
