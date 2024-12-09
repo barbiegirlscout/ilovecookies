@@ -1,7 +1,6 @@
 /* @font-face to load the custom font */
 @font-face {
     font-family: 'Trefoil Sans';
-    //////edit this !!!
     src: url('https://github.com/barbiegirlscout/ilovecookies/blob/e8a3de36041686f06ed835ad538af1eb2b59c56a/fonts/trefoilsans-bold.woff2') format('woff2'),
          url('https://github.com/barbiegirlscout/ilovecookies/blob/c6d117fb39b71341f00ec1939a7d470fc8235730/fonts/trefoilsans-bold.woff') format('woff');
     font-weight: bold;
