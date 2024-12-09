@@ -1,8 +1,8 @@
 /* @font-face to load the custom font */
 @font-face {
     font-family: 'Trefoil Sans';
-    src: url('https://github.com/barbiegirlscout/ilovecookies/blob/e8a3de36041686f06ed835ad538af1eb2b59c56a/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://github.com/barbiegirlscout/ilovecookies/blob/c6d117fb39b71341f00ec1939a7d470fc8235730/fonts/trefoilsans-bold.woff') format('woff');
+    src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -16,7 +16,7 @@ body, h1, p, button, div {
 
 /* Body styling */
 body {
-    font-family: 'Trefoil Sans', sans-serif;
+    font-family: 'Trefoil Sans', sans-serif; /* Apply the custom font globally */
     background-color: #f8f8f8;
     color: #333;
     padding: 20px;
