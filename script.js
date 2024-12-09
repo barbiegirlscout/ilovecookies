@@ -49,4 +49,3 @@ async function generateRandomGirls() {
 
 // Attach the function to the button click event
 document.getElementById('find-cookies').addEventListener('click', generateRandomGirls);
-
