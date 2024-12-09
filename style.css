@@ -1,67 +1,78 @@
-/* Import the Trefoil Sans Bold font */
-@font-face {
-    font-family: "Trefoil Sans Bold";
-    src: url("https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff2") format("woff2"),
-         url("https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Basic styling */
-body {
-    font-family: "Trefoil Sans Bold", Arial, sans-serif;
-    text-align: center;
-    background-color: #f9f9f9;
+/* Basic Reset */
+body, h1, p, button, div {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    margin: 50px auto;
-    width: 90%;
-    max-width: 600px;
+/* Body styling */
+body {
+    font-family: 'Trefoil Sans', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    font-family: "Trefoil Sans Bold", sans-serif;
+    font-size: 2rem;
     color: #333;
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
-button {
+/* Button Styling */
+#find-cookies {
     background-color: #00b451;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
-    font-family: "Trefoil Sans Bold", sans-serif;
 }
 
-button:hover {
-    opacity: 0.9;
+#find-cookies:hover {
+    background-color: #007d2d;
 }
 
+/* Results Styling */
 #results {
     margin-top: 20px;
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 .result {
     padding: 10px;
-    font-family: "Trefoil Sans Bold", sans-serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    margin: 10px auto;
 }
 
-.result:nth-child(1),
-.result:nth-child(3) {
+/* Alternating Colors for Results */
+.result:nth-child(odd) {
     background-color: #d5f267;
     color: black;
 }
 
-.result:nth-child(2) {
+.result:nth-child(even) {
     background-color: white;
     color: black;
 }
 
+/* Styling Links */
+.result a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.result a:hover {
+    color: #004d99;
+}
