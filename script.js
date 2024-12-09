@@ -1,7 +1,8 @@
 // Function to fetch and process the CSV file
 async function fetchCookieData() {
-    const response = await fetch('https://github.com/barbiegirlscout/ilovecookies/blob/28c02696691d0bc4eeeb12f6afd46c0b782aec7f/cookie_data2025_TEST.csv');
+    const response = await fetch('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/cookie_data2025_TEST.csv');
     const data = await response.text();
+
     // Parse the CSV into rows
     const rows = data.split('\n').map(row => row.split(','));
 
