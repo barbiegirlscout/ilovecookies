@@ -1,4 +1,4 @@
-/* @font-face to load the custom font */
+/* Define the font */
 @font-face {
     font-family: 'Trefoil Sans';
     src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff2') format('woff2'),
@@ -7,85 +7,61 @@
     font-style: normal;
 }
 
-/* Basic Reset */
-body, h1, p, button, div {
+/* Apply the font globally */
+body {
+    font-family: 'Trefoil Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-    font-family: 'Trefoil Sans', sans-serif; /* Apply the custom font globally */
-    background-color: #f8f8f8;
-    color: #333;
-    padding: 20px;
     text-align: center;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+    background-color: #d5f267; /* Yellow background */
+    color: black;
+    padding: 20px;
+    margin: 0;
 }
 
-/* Button Styling */
-#find-cookies {
-    background-color: #00b451;
+button {
+    background-color: #00b451; /* Green background */
     color: white;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
+    margin-top: 20px;
 }
 
-#find-cookies:hover {
-    background-color: #007d2d;
+button:hover {
+    background-color: #009f3d; /* Darker green when hovering */
 }
 
-/* Results Styling */
 #results {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    padding: 20px;
 }
 
 .result {
-    padding: 15px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: auto; /* Make the width adjust automatically based on content */
-    min-width: 300px; /* Set a minimum width so the box doesn't become too narrow */
-    max-width: 600px; /* Optional: Set a max-width to prevent it from becoming too wide */
-    margin: 10px auto;
-    box-sizing: border-box; /* Ensure padding does not affect the width */
-    word-wrap: break-word; /* Ensure long words or URLs wrap properly inside the box */
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
-/* Alternating Colors for Results */
 .result:nth-child(odd) {
-    background-color: #d5f267;
+    background-color: #d5f267; /* Yellow for odd results */
     color: black;
 }
 
 .result:nth-child(even) {
-    background-color: white;
+    background-color: white; /* White for even results */
     color: black;
 }
 
-/* Styling Links */
-.result a {
+a {
+    color: black;
     text-decoration: none;
-    color: #0066cc;
-    font-weight: bold;
 }
 
-.result a:hover {
-    color: #004d99;
+a:hover {
+    text-decoration: underline;
 }
