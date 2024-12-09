@@ -1,9 +1,8 @@
 /* Define the font */
 @font-face {
     font-family: 'Trefoil Sans';
-    src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff') format('woff');
-    font-weight: bold;
+    src: url('https://github.com/barbiegirlscout/ilovecookies/tree/8826ce09989d5458d8602b6d0291bba5418e43a8/fonts');
+       
     font-style: normal;
 }
 
