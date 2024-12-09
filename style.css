@@ -1,67 +1,78 @@
-/* Define the font */
-@font-face {
-    font-family: 'Trefoil Sans';
-    src: url('https://github.com/barbiegirlscout/ilovecookies/blob/698464f88107a25bd1a29f6a7b3bfc0d12b86f11/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://github.com/barbiegirlscout/ilovecookies/blob/cd7a70eb5b555c3dd6d330e6de00c13bbeb9b0d9/fonts/trefoilsans-bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Apply the font globally */
-body {
-    font-family: 'Trefoil Sans', sans-serif;
+/* Basic Reset */
+body, h1, p, button, div {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Trefoil Sans', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
     text-align: center;
 }
 
 h1 {
-    background-color: #d5f267; /* Yellow background */
-    color: black;
-    padding: 20px;
-    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-button {
-    background-color: #00b451; /* Green background */
+/* Button Styling */
+#find-cookies {
+    background-color: #00b451;
     color: white;
-    font-size: 18px;
-    padding: 10px 20px;
     border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
-    margin-top: 20px;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #009f3d; /* Darker green when hovering */
+#find-cookies:hover {
+    background-color: #007d2d;
 }
 
+/* Results Styling */
 #results {
     margin-top: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 .result {
     padding: 10px;
-    margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 500px;
+    margin: 10px auto;
 }
 
+/* Alternating Colors for Results */
 .result:nth-child(odd) {
-    background-color: #d5f267; /* Yellow for odd results */
+    background-color: #d5f267;
     color: black;
 }
 
 .result:nth-child(even) {
-    background-color: white; /* White for even results */
+    background-color: white;
     color: black;
 }
 
-a {
-    color: black;
+/* Styling Links */
+.result a {
     text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+.result a:hover {
+    color: #004d99;
 }
