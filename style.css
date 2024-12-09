@@ -1,89 +1,61 @@
-/* @font-face to load the custom font */
-@font-face {
-    font-family: 'Trefoil Sans';
-    src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/fonts/trefoilsans-bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Basic Reset */
-body, h1, p, button, div {
+/* Apply global font */
+body, button {
+    font-family: 'TrefoilSans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-    font-family: 'Trefoil Sans', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-    padding: 20px;
+/* Container styles */
+.container {
     text-align: center;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Button Styling */
-#find-cookies {
+/* Button styles */
+button {
     background-color: #00b451;
     color: white;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'TrefoilSans', sans-serif;
 }
 
-#find-cookies:hover {
-    background-color: #007d2d;
+/* Button hover effect */
+button:hover {
+    background-color: #007f32;
 }
 
-/* Results Styling */
+/* Results container */
 #results {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    padding: 10px;
 }
 
+/* Result box styling */
 .result {
     padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%; /* Set to 100% to make sure it takes up the full width */
-    max-width: 500px;
-    margin: 10px auto;
-    box-sizing: border-box; /* This makes sure padding doesn't affect the width */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'TrefoilSans', sans-serif;
 }
 
-/* Alternating Colors for Results */
+/* Result alternating background color */
 .result:nth-child(odd) {
     background-color: #d5f267;
-    color: black;
 }
 
 .result:nth-child(even) {
     background-color: white;
-    color: black;
 }
 
-/* Styling Links */
+/* Result text color */
 .result a {
+    color: black;
     text-decoration: none;
-    color: #0066cc;
-    font-weight: bold;
-}
-
-.result a:hover {
-    color: #004d99;
 }
