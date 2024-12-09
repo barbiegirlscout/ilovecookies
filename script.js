@@ -1,14 +1,6 @@
 // Function to fetch and process the CSV file
 async function fetchCookieData() {
-    // Use the raw GitHub URL for your CSV file
-    const response = await fetch('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/cookie_data2025_TEST.csv');
-    
-    // Check if the request was successful
-    if (!response.ok) {
-        console.error('Error fetching CSV file:', response.statusText);
-        return; // Stop execution if the file is not accessible
-    }
-
+    const response = await fetch('https://github.com/barbiegirlscout/ilovecookies/blob/263cc82a913746a4e13eae02a99222d552389224/cookie_data2025_TEST.csv');
     const data = await response.text();
 
     // Parse the CSV into rows
