@@ -1,51 +1,67 @@
-// Function to fetch and process the CSV file
-async function fetchCookieData() {
-    const response = await fetch('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/main/cookie_data2025_TEST.csv');
-    const data = await response.text();
-
-    // Parse the CSV into rows
-    const rows = data.split('\n').map(row => row.split(','));
-
-    // Extract the header and data rows
-    const headers = rows[0];
-    const dataRows = rows.slice(1).filter(row => row.length > 1); // Remove empty rows
-
-    return { headers, dataRows };
+/* Define the font */
+@font-face {
+    font-family: 'Trefoil Sans';
+    src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
-// Function to generate random girls and display their information
-async function generateRandomGirls() {
-    const { dataRows } = await fetchCookieData();
-
-    // Randomly pick 3 girls
-    const randomGirls = [];
-    while (randomGirls.length < 3) {
-        const randomIndex = Math.floor(Math.random() * dataRows.length);
-        const girl = dataRows[randomIndex];
-        if (!randomGirls.includes(girl)) {
-            randomGirls.push(girl);
-        }
-    }
-
-    // Clear previous results
-    const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = '';
-
-    // Display the results
-    randomGirls.forEach((girl, index) => {
-        const name = girl[5]; // Column F is "Girl First Name"
-        const siteID = girl[9]; // Column J is "Site URLID"
-        const url = `https://digitalcookie.girlscouts.org/council/636/${siteID}`;
-
-        // Create a result element
-        const resultElement = document.createElement('div');
-        resultElement.classList.add('result');
-        resultElement.innerHTML = `<strong>${name}</strong> - <a href="${url}" target="_blank">${url}</a>`;
-
-        // Append the result to the container
-        resultsContainer.appendChild(resultElement);
-    });
+/* Apply the font globally */
+body {
+    font-family: 'Trefoil Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-// Attach the function to the button click event
-document.getElementById('find-cookies').addEventListener('click', generateRandomGirls);
+h1 {
+    background-color: #d5f267; /* Yellow background */
+    color: black;
+    padding: 20px;
+    margin: 0;
+}
+
+button {
+    background-color: #00b451; /* Green background */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #009f3d; /* Darker green when hovering */
+}
+
+#results {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.result {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.result:nth-child(odd) {
+    background-color: #d5f267; /* Yellow for odd results */
+    color: black;
+}
+
+.result:nth-child(even) {
+    background-color: white; /* White for even results */
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
