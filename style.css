@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Trefoil Sans';
     src: url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff2') format('woff2'),
-         url('https://raw.githubusercontent.com/barbiegirlscout/ilovecookies/189b0734811a9e813156a571bf9eeae58255b35b/fonts/trefoilsans-bold.woff') format('woff');
+         url('https://github.com/barbiegirlscout/ilovecookies/blob/cd7a70eb5b555c3dd6d330e6de00c13bbeb9b0d9/fonts/trefoilsans-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
